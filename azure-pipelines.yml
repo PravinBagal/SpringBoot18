@@ -33,6 +33,9 @@ stages:
     - task: Maven@3
       displayName: 'Maven Package'
       inputs:
+        versionSpec: '11'
+        jdkArchitectureOption: 'x64'
+        jdkSourceOption: 'PreInstalled'
         mavenPomFile: 'pom.xml'
 
     - task: CopyFiles@2
